@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Honey</string>
+    <string name="text_instruction">注册意味着你同意</string>
+    <string name="text_choose_register">还可以选择一下注册方式</string>
 </resources>

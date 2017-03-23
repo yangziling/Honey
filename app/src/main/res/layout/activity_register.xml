@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_text"
+        android:layout_marginLeft="@dimen/layout_marginTop"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:layout_marginRight="@dimen/layout_marginRight"
+        android:hint="请输入手机号"
+        android:textColor="#0a0909"
+        android:textSize="18dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button"
+        android:layout_below="@id/et_text"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:layout_marginLeft="@dimen/layout_marginTop"
+        android:layout_marginRight="@dimen/layout_marginRight"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="获取验证码"
+        android:textSize="18dp"
+        android:background="#1ebc60"
+        android:gravity="center"
+    />
+    <TextView
+        android:layout_below="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#0a0909"
+        android:layout_marginLeft="@dimen/layout_marginRight"
+        android:text="@string/text_instruction"
+    />
+
+    <TextView
+        android:layout_above="@+id/ll_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="#0a0909"
+        android:layout_marginLeft="@dimen/layout_marginRight"
+        android:text="@string/text_choose_register"
+    />
+    <!--底部信息展示-->
+        <LinearLayout
+            android:id="@+id/ll_button"
+            android:layout_width="fill_parent"
+            android:layout_height= "40dp"
+            android:layout_marginLeft="@dimen/layout_marginTop"
+            android:layout_marginRight="@dimen/layout_marginRight"
+            android:layout_marginBottom="@dimen/layout_marginTop"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/wechat"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:text="微信"
+                android:layout_height="40dp" />
+            <Button
+                android:id="@+id/qq"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:text="QQ"
+                android:layout_height="40dp" />
+            <Button
+                android:id="@+id/weibo"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:text="微博"
+                android:layout_height="40dp" />
+        </LinearLayout>
+
+</RelativeLayout>

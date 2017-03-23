@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextWatcher password_watcher;
 
     private Button mLoginButton, mLoginError, mRegister, ONLYTEST;
+    private String mUserNameValus;
+    private String mPwdValus;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,16 +111,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.login://登录
-
-//                login();
-                HomeActivity.start(MainActivity.this);
+                login();
                 break;
             case R.id.login_error://无法登陆（忘记密码）
 
                 // TODO: 2017/3/20  
                 break;
             case R.id.register://注册新的用户
-
+                register();
                 // TODO: 2017/3/20 跳转到注册页面
                 break;
             case R.id.registfer:
@@ -147,6 +148,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     /**
+     * 注册用户
+     */
+    private void register() {
+        //点击注册页面进行跳转
+        Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+        MainActivity.this.startActivity(intent);
+
+    }
+
+    /**
      * 登录
      */
     private void login(){
@@ -154,6 +165,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          * 判断业务逻辑
          * 匹配相应的字段，进行比较
          */
+        mUserNameValus = et_name.getText().toString();
+        mPwdValus = et_pass.getText().toString();
+        if (mUserNameValus.equals("123")&&mPwdValus.equals("123")){
+            Toast.makeText(this,"登录成功",Toast.LENGTH_SHORT).show();
+
+            //成功之后页面进行跳转
+            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            MainActivity.this.startActivity(intent);
+        }else {
+            Toast.makeText(this,"用户名或密码失败，请重新登录",Toast.LENGTH_SHORT).show();
+        }
 
     }
 
