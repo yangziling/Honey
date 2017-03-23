@@ -3,16 +3,24 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    >
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/register_toolbar"
         android:layout_height="?attr/actionBarSize"
         android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/text_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册账户"
+            android:gravity="center" />
     </android.support.v7.widget.Toolbar>
 
     <EditText
         android:id="@+id/et_text"
+        android:layout_below="@id/register_toolbar"
         android:layout_marginLeft="@dimen/layout_marginTop"
         android:layout_marginTop="@dimen/layout_marginTop"
         android:layout_marginRight="@dimen/layout_marginRight"

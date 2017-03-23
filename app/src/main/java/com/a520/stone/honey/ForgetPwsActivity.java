@@ -14,6 +14,8 @@ import android.support.v7.widget.Toolbar;
  */
 public class ForgetPwsActivity extends AppCompatActivity {
 
+    private Toolbar mToolbar;
+
     public static void start(Context context) {
         Intent starter = new Intent(context, ForgetPwsActivity.class);
         context.startActivity(starter);
@@ -23,9 +25,10 @@ public class ForgetPwsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgetpsw);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.forget_toolbar);
-//        toolbar.setTitle("忘记密码");
-        setSupportActionBar(toolbar);
+        //toolbar 的显示
+        mToolbar = (Toolbar) findViewById(R.id.forget_toolbar);
+        mToolbar.setTitle("");
+        setSupportActionBar(mToolbar);
 
 
     }
