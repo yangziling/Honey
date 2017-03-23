@@ -17,7 +17,12 @@
             </intent-filter>
         </activity>
 
+        <!-- home主界面 -->
         <activity android:name=".HomeActivity"/>
+        <!-- 用户注册界面 -->
+        <activity android:name=".RegisterActivity"/>
+
+
     </application>
 
 </manifest>
