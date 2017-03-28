@@ -23,8 +23,6 @@ import android.widget.Toast;
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Toolbar mToolbar;
-    private ImageView mArrowBack;
-    private TextView mRegister;
 
     public static void start(Context context) {
         Intent starter = new Intent(context, RegisterActivity.class);
@@ -44,8 +42,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
         setContentView(R.layout.activity_register);
 
-        mRegister = (TextView) findViewById(R.id.text_register);
-        mRegister.setText("注册账户");
+        mToolbar = (Toolbar) findViewById(R.id.register_toolbar);
+        mToolbar.setTitle("");
+        setSupportActionBar(mToolbar);
+
 
     }
 
