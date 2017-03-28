@@ -2,14 +2,22 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
-    <FrameLayout
-        android:id="@+id/ll_register_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <include
-            layout="@layout/toolbar" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/register_toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent">
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_back"
+            android:clickable="true"
+            android:onClick="onClick"
+        />
         <TextView
             android:layout_marginStart="80dp"
             android:id="@+id/text_register"
@@ -18,14 +26,13 @@
             android:text="注册账户"
             android:textColor="#fff"
             android:textSize="20dp"
-            android:layout_gravity="center_vertical|center_horizontal"
-        />
-    </FrameLayout>
+            android:layout_gravity="center" />
+    </android.support.v7.widget.Toolbar>
 
 
     <EditText
         android:id="@+id/et_text"
-        android:layout_below="@id/ll_register_toolbar"
+        android:layout_below="@id/register_toolbar"
         android:layout_marginLeft="@dimen/layout_marginTop"
         android:layout_marginTop="@dimen/layout_marginTop"
         android:layout_marginRight="@dimen/layout_marginRight"
