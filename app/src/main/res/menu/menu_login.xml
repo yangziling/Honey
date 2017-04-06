@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk"
-    tools:context=".LoginActivity">
+    tools:context=".activity.LoginActivity">
 
     <item
         android:id="@+id/toolbar_action1"
