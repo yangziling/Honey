@@ -4,13 +4,22 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <Button
+        android:id="@+id/hotdock_button"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="100dp"
+        android:text="信号检测"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <TextView
+        android:id="@+id/hotdock_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="20dp"
         android:gravity="center"
-        android:text="Fragment hotdock"
-    />
+        android:text="Fragment hotdock" />
+
 
 
 </RelativeLayout>

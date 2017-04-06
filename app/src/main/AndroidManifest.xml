@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,12 +20,18 @@
         <!-- home主界面 -->
         <activity android:name=".MainActivity"/>
         <!-- 用户注册界面 -->
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".activity.RegisterActivity" />
         <!-- 忘记密码页面 -->
-        <activity android:name=".ForgetPwsActivity"/>
+        <activity android:name=".activity.ForgetPwsActivity"/>
+        <!--检测网络信号的强弱页面-->
+        <activity android:name=".activity.NetWorkActivity"/>
 
 
     </application>
     <!--网络权限-->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
 </manifest>

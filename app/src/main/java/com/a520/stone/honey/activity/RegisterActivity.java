@@ -1,4 +1,4 @@
-package com.a520.stone.honey;
+package com.a520.stone.honey.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,9 +11,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.a520.stone.honey.R;
 
 /**
  * <b>Create Date:</b> 2017/3/23<br>

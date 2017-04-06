@@ -1,4 +1,4 @@
-package com.a520.stone.honey;
+package com.a520.stone.honey.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.a520.stone.honey.MainActivity;
+import com.a520.stone.honey.R;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener,
                                                                 View.OnLongClickListener {
