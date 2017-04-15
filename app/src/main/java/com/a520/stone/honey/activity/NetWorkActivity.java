@@ -1,6 +1,5 @@
 package com.a520.stone.honey.activity;
 
-import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.telephony.PhoneStateListener;
 import android.telephony.SignalStrength;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.a520.stone.honey.R;
@@ -26,6 +26,7 @@ import com.a520.stone.honey.R;
  */
 public class NetWorkActivity extends AppCompatActivity {
 
+    private static final String TAG = "NetWorkActivity";
     private TextView mNetWork;
     private TelephonyManager mTelephonyManager;
     private PhoneStateListener mPhoneStateListener;
@@ -91,6 +92,7 @@ public class NetWorkActivity extends AppCompatActivity {
             super.onSignalStrengthsChanged(signalStrength);
             //获取0-4的5种信号级别 越大信号越好
             mGsmSignalStrength = signalStrength.getGsmSignalStrength();
+            Log.e(TAG,":::::"+mGsmSignalStrength);
             //网络信号改变时，获取网络信息
             getNetWorkInfo();
 
@@ -115,7 +117,7 @@ public class NetWorkActivity extends AppCompatActivity {
                 case ConnectivityManager.TYPE_MOBILE:
                     //移动网络,可以通过TelephonyManager来获取具体细化的网络类型
                     String netWorkStatus = isFastMobileNetwork() ? "4G网络" : "2G网络";
-                    mNetWork.setText("当前为" + netWorkStatus + "，信号强度=" + mGsmSignalStrength);
+                    mNetWork.setText("当前为" +netWorkStatus + "，信号强度=" + mGsmSignalStrength+"\n"+mTelephonyManager.getNetworkType());
                     break;
             }
         }else{
@@ -130,6 +132,7 @@ public class NetWorkActivity extends AppCompatActivity {
     private boolean isFastMobileNetwork() {
         if (mTelephonyManager.getNetworkType() == TelephonyManager.NETWORK_TYPE_LTE) {
             //这里只简单区分两种类型网络，认为4G网络为快速，但最终还需要参考信号值
+            Log.i("NetWorkActivity",mTelephonyManager.getNetworkType()+"");
             return true;
         }
         return false;
