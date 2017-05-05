@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.a520.stone.honey.activity.TestFragmentActivity;
 import com.a520.stone.honey.adapter.MyFragmentAdapter;
 
 /**
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
             switch (v.getId()){
                 case R.id.weixinghaoyou:
-                    Toast.makeText(MainActivity.this, "微信好友", Toast.LENGTH_SHORT).show();
+                    TestFragmentActivity.start(MainActivity.this);
                     break;
                 case R.id.pengyouquan:
                     Toast.makeText(MainActivity.this, "朋友圈", Toast.LENGTH_SHORT).show();

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <fragment
+        android:id="@+id/FragmentTop"
+        android:name="com.a520.stone.honey.fragment.ButtonFragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <fragment
+        android:id="@+id/FragmentBotton"
+        android:name="com.a520.stone.honey.fragment.TopFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+</LinearLayout>

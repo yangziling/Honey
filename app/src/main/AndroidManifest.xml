@@ -25,6 +25,8 @@
         <activity android:name=".activity.ForgetPwsActivity"/>
         <!--检测网络信号的强弱页面-->
         <activity android:name=".activity.NetWorkActivity"/>
+        <!--FragmentActivity 联系操作-->
+        <activity android:name=".activity.TestFragmentActivity"/>
 
 
     </application>
