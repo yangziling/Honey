@@ -41,13 +41,11 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#ffffff"
-        app:tabIndicatorColor="#e19844"
+        app:tabIndicatorColor="#f20313"
         app:tabIndicatorHeight="2dp"
         app:tabTextColor="#080707"
-        app:tabSelectedTextColor="#33a0ff"
+        app:tabSelectedTextColor="#f20313"
         app:tabMode="fixed"
-        app:tabBackground="@drawable/selected"
         />
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
