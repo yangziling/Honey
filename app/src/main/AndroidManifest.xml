@@ -24,9 +24,14 @@
         <!-- 忘记密码页面 -->
         <activity android:name=".activity.ForgetPwsActivity"/>
         <!--检测网络信号的强弱页面-->
-        <activity android:name=".activity.NetWorkActivity"/>
+        <activity android:name=".activity.NetWorkActivity"
+
+        />
         <!--FragmentActivity 联系操作-->
         <activity android:name=".activity.TestFragmentActivity"/>
+        <!--打开电灯的页面-->
+        <activity android:name=".activity.FlashLightActivity"
+            android:screenOrientation="portrait" />
 
 
     </application>
@@ -35,5 +40,8 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--访问carema 和light-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
 
 </manifest>

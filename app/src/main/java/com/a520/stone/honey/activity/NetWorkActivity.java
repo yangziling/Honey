@@ -15,6 +15,8 @@ import android.telephony.PhoneStateListener;
 import android.telephony.SignalStrength;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.a520.stone.honey.R;
@@ -32,6 +34,7 @@ public class NetWorkActivity extends AppCompatActivity {
     private PhoneStateListener mPhoneStateListener;
     private NetWorkBroadCastReciver mNetWorkBroadCastReciver;
     private int mGsmSignalStrength;
+    private Button mComeIn;
 
     public static void start(Context context) {
         Intent starter = new Intent(context, NetWorkActivity.class);
@@ -47,6 +50,16 @@ public class NetWorkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_network);
         mNetWork = (TextView) findViewById(R.id.network_text);
+        mComeIn = (Button) findViewById(R.id.come_button);
+
+        //进入开启电灯页面
+        mComeIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NetWorkActivity.this,FlashLightActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //获取telephonyManager
         mTelephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
