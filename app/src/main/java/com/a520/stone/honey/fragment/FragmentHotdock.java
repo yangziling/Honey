@@ -42,7 +42,6 @@ public class FragmentHotdock extends Fragment{
             @Override
             public void onClick(View v) {
                 NetWorkActivity.start(getContext());
-//                Toast.makeText(getActivity().getApplication(), "点我干嘛",Toast.LENGTH_LONG).show();
             }
         });
     }
